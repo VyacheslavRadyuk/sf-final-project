@@ -6,9 +6,9 @@ public class PriceListOfTripsController {
     public PriceListOfTripsController(ApexPages.StandardController stdController) {  
         this.tourist = ApexPages.CurrentPage().getparameters().get('Id');
         this.trips = TouristAssignmentController.getTrips(tourist); 
-		this.trips.sort();
+        this.trips.sort();
         List<String> tripNames = new List<String>(); 
-                
+        
         for (Trip__c trip : trips) {
             tripNames.add(trip.Name);
         }
